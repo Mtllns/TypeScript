@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../models/car.js"></script>
+    <script src="../models/wheel.js"></script>
+    <script src="../controllers/controller.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        #carInfo {
+            font-size: 22px;
+            font-weight: 600;
+            padding-left: 20px;
+            padding-right: 20px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <div class="container mt-5 justify-content-around">
+        <div class="row">
+            <div class="col-6 border py-2">
+                <p class="text-white p-2">Rellena los campos siguientes: <span class="text-alert" id="car-alert"></span></p>
+
+                <form name="introCar" class="py-2 px-2 text-white">
+                    <label class="d-block" for="plate">Matrícula: </label>
+                    <input class="d-block form-control" type="text" id="plate" name="plate">
+                    <label class="d-block" for="brand">Marca: </label>
+                    <input class="d-block form-control" type="text" id="brand" name="brand">
+                    <label class="d-block" for="color">Color: </label>
+                    <input class="d-block form-control" type="text" id="color" name="color">
+                    <button class="rubberBand btn btn-primary mt-3 float-right" id="create-car" onclick="submitCar()">Create car</button>
+                </form>
+            </div>
+
+            <div class="col-6 d-none" id="ruedas">
+                <form class="text-white" action="">
+                    <div class="form-row mt-3">
+                        <div class="form-group col-md-6">
+                            <label class="" for="">Marca rueda 1</label>
+                            <input class="form-control" type="text" id="mr_1">
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Diámetro Rueda 1</label>
+                            <input class="form-control" type="text" id="dr_1">
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Marca rueda 2</label>
+                            <input class="form-control" type="text" id="mr_2">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Diámetro rueda 2</label>
+                            <input class="form-control" type="text" id="dr_2">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Marca rueda 3</label>
+                            <input class="form-control" type="text" id="mr_3">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Diámetro rueda 3</label>
+                            <input class="form-control" type="text" id="dr_3">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Marca rueda 4</label>
+                            <input class="form-control" type="text" id="mr_4">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Diámetro rueda 4</label>
+                            <input class="form-control" type="text" id="dr_4">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary float-right" id="create-wheels" onclick="submitWeels()">Add Wheels</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="container mt-2 d-none" id="resultado">
+            <div id="car" class="row justify-content-center p-3 mb-5 bg-white rounded">
+                <p id="carInfo" class="mt-1 pt-1"></p>
+
+                <div class="col-6 h5 d-flex justify-content-center" id="wheel0"></div>
+                <div class="col-6 h5 d-flex justify-content-center" id="diameter0"></div>
+                <div class="col-6 h5 d-flex justify-content-center" id="wheel1"></div>
+                <div class="col-6 h5 d-flex justify-content-center" id="diameter1"></div>
+                <div class="col-6 h5 d-flex justify-content-center" id="wheel2"></div>
+                <div class="col-6 h5 d-flex justify-content-center" id="diameter2"></div>
+                <div class="col-6 h5 d-flex justify-content-center" id="wheel3"></div>
+                <div class="col-6 h5 d-flex justify-content-center" id="diameter3"></div>
+            </div>
+            
+            <div class="w-100 py-5 my-3"></div>
+        </div>
+    </div>
+
+
+
+</body>
+    <!-- JavaScript externo -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
